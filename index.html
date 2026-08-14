@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TechEmu - Jogos, emulação e tecnologia."
+    >
+
+    <title>TechEmu - Jogos e Emulação</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <a
+            href="index.html"
+            class="logo-area"
+        >
+
+            <img
+                src="assets/logo.png"
+                alt="TechEmu"
+                class="logo"
+            >
+
+            <div>
+
+                <h1>
+                    Tech<span>Emu</span>
+                </h1>
+
+                <p>
+                    Jogos • Emulação • Tecnologia
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#mais-baixados">
+                Mais Baixados
+            </a>
+
+            <a href="#todos-jogos">
+                Todos os Jogos
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- MENU MOBILE -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a href="#inicio">
+            Início
+        </a>
+
+        <a href="#mais-baixados">
+            Mais Baixados
+        </a>
+
+        <a href="#todos-jogos">
+            Todos os Jogos
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main id="inicio">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-badge">
+            🎮 TECHEMU
+        </div>
+
+
+        <h2>
+            Encontre seus
+            <span>jogos favoritos</span>
+        </h2>
+
+
+        <p>
+            Explore nosso catálogo de jogos,
+            encontre seus títulos favoritos e
+            descubra novos jogos.
+        </p>
+
+
+        <div class="platform-buttons">
+
+            <button
+                class="platform-button active"
+                data-platform="mobile"
+            >
+                📱 PSP para Celular
+            </button>
+
+
+            <button
+                class="platform-button"
+                data-platform="pc"
+            >
+                🖥️ PSP para PC
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PESQUISA
+========================= -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Pesquisar por jogos..."
+                autocomplete="off"
+            >
+
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                aria-label="Limpar pesquisa"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <p
+            id="searchResultText"
+            class="search-result-text"
+        ></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESULTADOS DA PESQUISA
+========================= -->
+
+<section
+    class="section search-results-section"
+    id="searchResultsSection"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    🔎 PESQUISA
+                </span>
+
+                <h2>
+                    Resultados
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="games-grid"
+            id="searchResults"
+        ></div>
+
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <div>
+                😕
+            </div>
+
+            <h3>
+                Nenhum jogo encontrado
+            </h3>
+
+            <p>
+                Tente pesquisar usando outro nome.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MAIS BAIXADOS
+========================= -->
+
+<section
+    class="section"
+    id="mais-baixados"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    ⭐ EM DESTAQUE
+                </span>
+
+                <h2>
+                    Mais Baixados
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="games-grid"
+            id="featuredGames"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TODOS OS JOGOS
+========================= -->
+
+<section
+    class="section"
+    id="todos-jogos"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div>
+
+                <span>
+                    🎮 CATÁLOGO
+                </span>
+
+                <h2>
+                    Todos os Jogos
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="games-grid"
+            id="allGames"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                Tech<span>Emu</span>
+            </h2>
+
+            <p>
+                Jogos • Emulação • Tecnologia
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#mais-baixados">
+                Mais Baixados
+            </a>
+
+            <a href="#todos-jogos">
+                Todos os Jogos
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 TechEmu. Todos os direitos reservados.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
