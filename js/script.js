@@ -176,8 +176,8 @@ const games = [
         image: "bomba-patch-2026.jpg",
         category: ["Esportes"],
         platform: "mobile",
-        featured: true,
-        download: "https://www.mediafire.com/file/9bwa05wv7maotyy/ISO_BOMBA_PATCH_MYMAX_CAMERA_NORMAL_2026_%25281%2529.iso/file"
+        featured: false,
+        download: "#"
     },
 
     {
