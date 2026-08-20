@@ -171,6 +171,16 @@ const games = [
     },
 
     {
+        id: "bomba-patch-2026",
+        title: "Bomba Patch 2026",
+        image: "bomba-patch-2026.jpg",
+        category: ["Esportes"],
+        platform: "mobile",
+        featured: true,
+        download: "https://www.mediafire.com/file/9bwa05wv7maotyy/ISO_BOMBA_PATCH_MYMAX_CAMERA_NORMAL_2026_%25281%2529.iso/file"
+    },
+
+    {
         id: "fifa-14",
         title: "FIFA 14",
         image: "fifa-14.jpg",
