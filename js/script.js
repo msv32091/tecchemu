@@ -60,6 +60,36 @@ const games = [
         download: "#"
     },
 
+{
+        id: "resident-evil-4",
+        title: "Resident Evil 4: PT-BR",
+        image: "resident-evil-4.jpg",
+        category: ["Ação", "Terror"],
+        platform: "mobile",
+        featured: true,
+        download: "https://www.mediafire.com/file/g2m4vscmnpe61za/RESIDENT_EVIL_4_.zip/file"
+    },
+
+{
+        id: "silent-hill-origins",
+        title: "Silent Hill Origins",
+        image: "silent-hill-origins.jpg",
+        category: ["Ação", "Terror"],
+        platform: "mobile",
+        featured: true,
+        download: "https://www.mediafire.com/file/jf06f0nd0frqnj7/Silent_Hill_Origins.7z/file"
+    },
+
+{
+        id: "dantes-inferno",
+        title: "Dante's Inferno",
+        image: "dantes-inferno.jpg",
+        category: ["Ação", "Aventura"],
+        platform: "mobile",
+        featured: true,
+        download: "https://www.mediafire.com/file/w3ya8xmhpx0vpwr/Dante"
+    },
+
     {
         id: "dragon-ball-z-shin-budokai",
         title: "Dragon Ball Z: Shin Budokai",
@@ -310,6 +340,16 @@ const games = [
         download: "https://www.mediafire.com/file/67pugmeaantzndw/Spider-Man_3_%2528ByFaile%2529_%2528v1.02%2529.zip/file"
     },
 
+{
+        id: "x-man-legends-2",
+        title: "X-Man Legends 2: Rise Of Apocalypse",
+        image: "x-man-legends-2.jpg",
+        category: ["Ação"],
+        platform: "mobile",
+        featured: false,
+        download: "https://www.mediafire.com/file/eh4icn85jonqo1s/XMLIIROAPSP.Www.GamezFull.com.rar"
+    },
+
     {
         id: "toy-story-3",
         title: "Toy Story 3",
@@ -318,6 +358,16 @@ const games = [
         platform: "mobile",
         featured: false,
         download: "https://www.mediafire.com/file/snri4674ogzb3li/Toy-Story-3_Mobile_PPSSPP.zip/file"
+    },
+
+ {
+        id: "cars",
+        title: "Carros",
+        image: "carros.jpg",
+        category: ["Corrida"],
+        platform: "mobile",
+        featured: false,
+        download: "https://www.mediafire.com/file/on15r5aff61x7t1/CARROS.cso/file"
     },
 
     {
