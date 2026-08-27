@@ -530,6 +530,16 @@ const games = [
         download: "#"
     },
 
+{
+        id: "marvel-nemesis",
+        title: "Marvel Nemesis: Rise of the Imperfects",
+        image: "marvel-nemesis-rise-of-the-imperfects.jpg",
+        category: ["Ação", "Aventura"],
+        platform: "mobile",
+        featured: true,
+        download: "https://www.mediafire.com/file/qcew32vpy9x6o5i/Marvel+Marvel+Nemesis+Rise+Of+The+Inperfects+By+Faile.zip/file"
+    },
+
     {
         id: "metal-gear-solid-peace-walker",
         title: "Metal Gear Solid: Peace Walker",
