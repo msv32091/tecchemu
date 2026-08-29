@@ -37,7 +37,7 @@
     <div class="container header-content">
 
         <a
-            href="index.html"
+            href="#inicio"
             class="logo-area"
         >
 
@@ -89,8 +89,6 @@
 
     </div>
 
-
-    <!-- MENU MOBILE -->
 
     <div
         class="mobile-menu"
@@ -331,9 +329,7 @@
                     🎮 CATÁLOGO
                 </span>
 
-                <h2>
-                    Todos os Jogos
-                </h2>
+                <h2>Todos os Jogos <span id="gameCount">(0)</span></h2>
 
             </div>
 
@@ -350,7 +346,6 @@
 </section>
 
 
-
 </main>
 
 
@@ -362,7 +357,6 @@
 <footer class="footer">
 
     <div class="container footer-content">
-
 
         <div class="footer-brand">
 
@@ -406,9 +400,198 @@
 
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- =====================================================
+     MODAL DE DETALHES DO JOGO
+===================================================== -->
+
+<div
+    class="game-modal"
+    id="gameModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="game-modal-overlay"
+        id="gameModalOverlay"
+    ></div>
+
+
+    <div
+        class="game-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <button
+            class="modal-close"
+            id="modalClose"
+            aria-label="Fechar"
+        >
+            ✕
+        </button>
+
+
+        <!-- TOPO -->
+
+        <div class="modal-top">
+
+
+            <!-- CAPA -->
+
+            <div class="modal-cover">
+
+                <img
+                    id="modalCover"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="modal-main-info">
+
+                <span
+                    class="modal-platform"
+                    id="modalPlatform"
+                >
+                    📱 PSP
+                </span>
+
+
+                <h2 id="modalTitle">
+                    Nome do jogo
+                </h2>
+
+
+                <div class="modal-meta">
+
+
+                    <div class="modal-meta-item">
+
+                        <span>
+                            💾
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Tamanho
+                            </small>
+
+                            <strong id="modalSize">
+                                Não informado
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="modal-meta-item">
+
+                        <span>
+                            🎮
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Categoria
+                            </small>
+
+                            <strong id="modalCategory">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DOWNLOADS -->
+
+                <div
+                    class="modal-downloads"
+                    id="modalDownloads"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- GALERIA -->
+
+        <div class="modal-gallery-section">
+
+
+            <div class="modal-section-title">
+
+                <span>
+                    📸 IMAGENS DO JOGO
+                </span>
+
+                <h3>
+                    Galeria
+                </h3>
+
+            </div>
+
+
+            <div class="modal-gallery">
+
+
+                <button
+                    class="gallery-arrow"
+                    id="galleryPrev"
+                    aria-label="Imagem anterior"
+                >
+                    ‹
+                </button>
+
+
+                <div class="gallery-image-wrapper">
+
+                    <img
+                        id="galleryImage"
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <button
+                    class="gallery-arrow"
+                    id="galleryNext"
+                    aria-label="Próxima imagem"
+                >
+                    ›
+                </button>
+
+            </div>
+
+
+            <div
+                class="gallery-counter"
+                id="galleryCounter"
+            >
+                1 / 1
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 
 <script src="js/script.js"></script>
 

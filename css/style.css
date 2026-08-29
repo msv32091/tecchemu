@@ -90,9 +90,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    CONTAINER
-========================= */
+===================================================== */
 
 .container {
 
@@ -107,9 +107,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 .header {
 
@@ -123,6 +123,9 @@ input {
         rgba(8, 9, 13, 0.88);
 
     backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
         blur(18px);
 
     border-bottom:
@@ -224,8 +227,7 @@ input {
 
 .nav a:hover {
 
-    color:
-        white;
+    color: white;
 
 }
 
@@ -254,9 +256,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
 
@@ -421,9 +423,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    SEARCH
-========================= */
+===================================================== */
 
 .search-section {
 
@@ -536,9 +538,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 
 .section {
 
@@ -578,9 +580,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    PESQUISA
-========================= */
+===================================================== */
 
 .search-results-section {
 
@@ -596,9 +598,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    GRID
-========================= */
+===================================================== */
 
 .games-grid {
 
@@ -612,9 +614,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    CARD
-========================= */
+===================================================== */
 
 .game-card {
 
@@ -772,12 +774,17 @@ input {
 
     color: white;
 
+    border: none;
+
+    cursor: pointer;
+
     font-size: 11px;
 
     font-weight: 700;
 
     transition:
-        background 0.2s;
+        background 0.2s,
+        transform 0.2s;
 
 }
 
@@ -786,6 +793,9 @@ input {
 
     background:
         var(--primary-light);
+
+    transform:
+        translateY(-1px);
 
 }
 
@@ -803,9 +813,16 @@ input {
 }
 
 
-/* =========================
+.download-button.disabled:hover {
+
+    transform: none;
+
+}
+
+
+/* =====================================================
    SEM RESULTADOS
-========================= */
+===================================================== */
 
 .no-results {
 
@@ -847,9 +864,9 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 .footer {
 
@@ -944,9 +961,625 @@ input {
 }
 
 
-/* =========================
+/* =====================================================
+   MODAL
+===================================================== */
+
+.game-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+}
+
+
+.game-modal.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+
+.game-modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(3, 4, 7, 0.78);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+}
+
+
+.game-modal-content {
+
+    position: relative;
+
+    width:
+        min(
+            900px,
+            100%
+        );
+
+    max-height:
+        90vh;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121722,
+            #0d1016
+        );
+
+    border:
+        1px solid
+        rgba(124, 60, 255, 0.25);
+
+    border-radius:
+        20px;
+
+    padding:
+        28px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0, 0, 0, 0.65);
+
+    transform:
+        translateY(25px)
+        scale(0.97);
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.game-modal.active
+.game-modal-content {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+.game-modal-content::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.game-modal-content::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.game-modal-content::-webkit-scrollbar-thumb {
+
+    background:
+        #292e38;
+
+    border-radius:
+        20px;
+
+}
+
+
+/* =====================================================
+   FECHAR
+===================================================== */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    z-index: 5;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        0.2s;
+
+}
+
+
+.modal-close:hover {
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* =====================================================
+   TOPO DO MODAL
+===================================================== */
+
+.modal-top {
+
+    display: grid;
+
+    grid-template-columns:
+        210px 1fr;
+
+    gap: 28px;
+
+    padding-right: 45px;
+
+}
+
+
+.modal-cover {
+
+    width: 210px;
+
+    aspect-ratio:
+        3 / 4;
+
+    overflow: hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        #151923;
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.4);
+
+}
+
+
+.modal-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.modal-main-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.modal-platform {
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        7px;
+
+    background:
+        rgba(124, 60, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(124, 60, 255, 0.25);
+
+    color:
+        var(--primary-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+}
+
+
+.modal-main-info h2 {
+
+    font-size:
+        clamp(25px, 4vw, 38px);
+
+    line-height: 1.15;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =====================================================
+   METADADOS
+===================================================== */
+
+.modal-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.modal-meta-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        11px 13px;
+
+    min-width: 145px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        9px;
+
+}
+
+
+.modal-meta-item > span {
+
+    font-size: 18px;
+
+}
+
+
+.modal-meta-item div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.modal-meta-item small {
+
+    color:
+        var(--muted);
+
+    font-size: 9px;
+
+}
+
+
+.modal-meta-item strong {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   DOWNLOADS DO MODAL
+===================================================== */
+
+.modal-downloads {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.modal-download-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 46px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition:
+        0.2s;
+
+}
+
+
+.modal-download-button:hover {
+
+    background:
+        var(--primary-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.modal-gallery-section {
+
+    margin-top: 35px;
+
+    padding-top: 28px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.modal-section-title span {
+
+    color:
+        var(--primary-light);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.modal-section-title h3 {
+
+    font-size: 22px;
+
+    margin-top: 5px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.modal-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        45px 1fr 45px;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.gallery-image-wrapper {
+
+    width: 100%;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        #08090d;
+
+    border:
+        1px solid
+        var(--border);
+
+}
+
+
+.gallery-image-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition:
+        opacity 0.2s ease;
+
+}
+
+
+.gallery-arrow {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        0.2s;
+
+}
+
+
+.gallery-arrow:hover {
+
+    background:
+        var(--primary);
+
+    border-color:
+        var(--primary);
+
+}
+
+
+.gallery-counter {
+
+    text-align: center;
+
+    color:
+        var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================================================
+   BLOQUEAR SCROLL
+===================================================== */
+
+body.modal-open {
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
    RESPONSIVO
-========================= */
+===================================================== */
 
 @media (max-width: 1050px) {
 
@@ -1050,6 +1683,120 @@ input {
 }
 
 
+@media (max-width: 700px) {
+
+    .game-modal {
+
+        padding: 12px;
+
+    }
+
+
+    .game-modal-content {
+
+        padding: 20px;
+
+        max-height:
+            94vh;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .modal-top {
+
+        grid-template-columns:
+            125px 1fr;
+
+        gap: 17px;
+
+        padding-right: 30px;
+
+    }
+
+
+    .modal-cover {
+
+        width: 125px;
+
+    }
+
+
+    .modal-main-info h2 {
+
+        font-size: 20px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .modal-meta {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .modal-meta-item {
+
+        min-width: 0;
+
+        padding: 8px;
+
+    }
+
+
+    .modal-downloads {
+
+        flex-direction: column;
+
+    }
+
+
+    .modal-download-button {
+
+        width: 100%;
+
+    }
+
+
+    .gallery-image-wrapper {
+
+        height: 230px;
+
+    }
+
+
+    .modal-gallery {
+
+        grid-template-columns:
+            38px 1fr 38px;
+
+        gap: 7px;
+
+    }
+
+
+    .gallery-arrow {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 25px;
+
+    }
+
+}
+
+
 @media (max-width: 600px) {
 
     .games-grid {
@@ -1104,6 +1851,53 @@ input {
 }
 
 
+@media (max-width: 430px) {
+
+    .modal-top {
+
+        grid-template-columns:
+            100px 1fr;
+
+    }
+
+
+    .modal-cover {
+
+        width: 100px;
+
+    }
+
+
+    .modal-platform {
+
+        font-size: 8px;
+
+    }
+
+
+    .modal-main-info h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .modal-meta-item strong {
+
+        font-size: 9px;
+
+    }
+
+
+    .gallery-image-wrapper {
+
+        height: 190px;
+
+    }
+
+}
+
+
 @media (max-width: 380px) {
 
     .games-grid {
@@ -1126,4 +1920,7 @@ input {
 
     }
 
+}#gameCount {
+    font-size: 1.0em;
+    font-weight: 600;
 }
