@@ -143,11 +143,11 @@ const games = [
 
         platform: "mobile",
 
-        featured: false,
+        featured: true,
 
-        size: "A informar",
+        size: "541.47MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/oxsqm89f4ctiag4/GTAchi1n4tptbrpsp.rar/file?dkey=by7cz6k3ict&r=881",
 
         downloadPc: "",
 
@@ -1331,13 +1331,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "1.67GB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/ip5tk6e6v79j2tv/MARVEL_ULT_ALLIANCE_2_%2528PSP%2529.iso/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "marvel-ultimate-alliance-2-1.jpg",
+            "marvel-ultimate-alliance-2-2.jpg"
+        ]
     },
 
 
@@ -1449,13 +1452,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "980.61MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/j50a3i6og3e2fnt/Manhunt_2_%2528BR%2529.zip/file?dkey=otfzmp00vez&r=1601",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "manhunt-2-1.jpg",
+            "manhunt-2-2.jpg"
+        ]
     },
 
 
@@ -1596,6 +1602,33 @@ const games = [
         gallery: []
     },
 
+{
+    id: "gta-san-andreas",
+
+    title: "GTA San Andreas: PT-BR",
+
+    image: "gta-san-andreas.jpg",
+
+    category: ["Ação", "Aventura"],
+
+    platform: "android",
+
+    featured: true,
+
+    size: "2.46GB",
+
+    downloadAndroid: "https://www.mediafire.com/file_premium/afa9tmniyfznw8e",
+
+    downloadMobile: "",
+
+    downloadPc: "",
+
+    gallery: [
+        "gta-san-andreas-1.jpg",
+        "gta-san-andreas-2.jpg",
+        "gta-san-andreas-3.jpg"
+    ]
+},
 
     {
         id: "wwe-smackdown-vs-raw-2010",
@@ -1776,10 +1809,13 @@ function createGameCard(game) {
 
 
     const downloadAvailable =
-        Boolean(
-            game.downloadMobile &&
-            game.downloadMobile !== "#"
-        );
+    Boolean(
+        game.platform === "android"
+            ? game.downloadAndroid &&
+              game.downloadAndroid !== "#"
+            : game.downloadMobile &&
+              game.downloadMobile !== "#"
+    );
 
 
     card.innerHTML = `
@@ -1793,8 +1829,14 @@ function createGameCard(game) {
             >
 
             <span class="game-platform">
-                📱 PSP
-            </span>
+    ${
+        game.platform === "mobile"
+            ? "📱 PSP"
+            : game.platform === "pc"
+                ? "🖥️ PSP para PC"
+                : "📱 Celular"
+    }
+</span>
 
         </div>
 
@@ -1923,10 +1965,18 @@ function updateGameCount() {
 
     if (!gameCount) return;
 
-    const totalGames = games.length;
+    const activeButton = document.querySelector(
+        ".platform-button.active"
+    );
+
+    const selectedPlatform =
+        activeButton?.dataset.platform || "mobile";
+
+    const totalGames = games.filter(
+        game => game.platform === selectedPlatform
+    ).length;
 
     gameCount.textContent = `(${totalGames})`;
-
 }
 
 
@@ -2149,12 +2199,14 @@ platformButtons.forEach(button => {
 
 
             currentPlatform =
-                button.dataset.platform;
+    button.dataset.platform;
+
+updateGameCount();
 
 
-            if (
-                searchInput.value.trim() !== ""
-            ) {
+if (
+    searchInput.value.trim() !== ""
+) {
 
                 performSearch();
 
@@ -2245,19 +2297,22 @@ function openGameModal(game) {
 
     /* PLATAFORMA */
 
-    if (
-        game.platform === "mobile"
-    ) {
+    if (game.platform === "mobile") {
 
-        modalPlatform.textContent =
-            "📱 PSP para Celular";
+    modalPlatform.textContent =
+        "📱 PSP para Celular";
 
-    } else {
+} else if (game.platform === "pc") {
 
-        modalPlatform.textContent =
-            "🖥️ PSP para PC";
+    modalPlatform.textContent =
+        "🖥️ PSP para PC";
 
-    }
+} else if (game.platform === "android") {
+
+    modalPlatform.textContent =
+        "📱 Jogo para Celular";
+
+}
 
 
     /* TAMANHO */
@@ -2386,42 +2441,69 @@ function renderModalDownloads(game) {
     modalDownloads.innerHTML = "";
 
 
-    /* MOBILE */
+    /* DOWNLOAD PARA CELULAR / PSP */
 
-    if (
-        game.downloadMobile &&
-        game.downloadMobile !== "#"
-    ) {
+if (
+    game.platform === "android" &&
+    game.downloadAndroid &&
+    game.downloadAndroid !== "#"
+) {
 
-        const mobileButton =
-            document.createElement("a");
+    const androidButton =
+        document.createElement("a");
+
+    androidButton.href =
+        game.downloadAndroid;
+
+    androidButton.target =
+        "_blank";
+
+    androidButton.rel =
+        "noopener noreferrer";
+
+    androidButton.className =
+        "modal-download-button";
+
+    androidButton.innerHTML =
+        "📱 Download para Celular";
+
+    modalDownloads.appendChild(
+        androidButton
+    );
+
+}
 
 
-        mobileButton.href =
-            game.downloadMobile;
+/* DOWNLOAD PSP PARA CELULAR */
 
+if (
+    game.platform === "mobile" &&
+    game.downloadMobile &&
+    game.downloadMobile !== "#"
+) {
 
-        mobileButton.target =
-            "_blank";
+    const mobileButton =
+        document.createElement("a");
 
+    mobileButton.href =
+        game.downloadMobile;
 
-        mobileButton.rel =
-            "noopener noreferrer";
+    mobileButton.target =
+        "_blank";
 
+    mobileButton.rel =
+        "noopener noreferrer";
 
-        mobileButton.className =
-            "modal-download-button";
+    mobileButton.className =
+        "modal-download-button";
 
+    mobileButton.innerHTML =
+        "📱 Download PSP";
 
-        mobileButton.innerHTML =
-            "📱 Download Mobile";
-
-
-        modalDownloads.appendChild(
-            mobileButton
-        );
-
-    }
+    modalDownloads.appendChild(
+        mobileButton
+    );
+}
 
 
     /* PC */
