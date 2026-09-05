@@ -1794,7 +1794,7 @@ const games = [
 
     platform: "android",
 
-    featured: true,
+    featured: false,
 
     size: "1.98GB",
 
