@@ -1798,7 +1798,7 @@ const games = [
 
     size: "1.98GB",
 
-    downloadAndroid: "https://www.mediafire.com/download/0j2hmyq7hgb2uqn",
+    downloadAndroid: "",
 
     downloadMobile: "",
 
