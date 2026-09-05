@@ -916,13 +916,12 @@ input {
 
 
 .footer-links {
-
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 
-    align-items: center;
-
-    gap: 25px;
-
+    margin-left: 15px;
 }
 
 
@@ -1923,4 +1922,89 @@ body.modal-open {
 }#gameCount {
     font-size: 1.0em;
     font-weight: 600;
+}/* =========================================
+   REDES SOCIAIS DO RODAPÉ
+========================================= */
+
+.social-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.social-button {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* INSTAGRAM */
+
+.social-button.instagram:hover {
+
+    background: #e1306c;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(225, 48, 108, 0.35);
+
+}
+
+
+/* DISCORD */
+
+.social-button.discord:hover {
+
+    background: #5865f2;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(88, 101, 242, 0.35);
+
+}
+
+
+/* EFEITO AO CLICAR */
+
+.social-button:active {
+
+    transform: scale(0.92);
+
 }

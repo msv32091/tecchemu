@@ -1603,6 +1603,159 @@ const games = [
     },
 
 {
+        id: "hollow-knight-silksong",
+
+        title: "Hollow Knight: Silksong - PT-BR",
+
+        image: "hollow-knight-silksong.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "2.28GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/5c2ou2twkyifep7/HollowKnight-Silksong(By+-+RuDroid).zip/file",
+
+        gallery: [
+            "hollow-knight-silksong-1.jpg",
+            "hollow-knight-silksong-2.jpg"
+        ]
+    },
+
+{
+        id: "hollow-knight",
+
+        title: "Hollow Knight - PT-BR",
+
+        image: "hollow-knight.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "1.13GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/61uopl2mavmoref/Hollow_Knight.rar/file",
+
+        gallery: [
+            "hollow-knight-1.jpg",
+            "hollow-knight-2.jpg"
+        ]
+    },
+
+{
+        id: "hollow-knight-mobile",
+
+        title: "Hollow Knight Mobile - PT-BR",
+
+        image: "hollow-knight.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "android",
+
+        featured: true,
+
+        size: "931.55MB",
+
+        downloadAndroid: "https://www.mediafire.com/file/y0denfflardz4qp/hollowKnight-By-RuDroid777-.apk/file",
+
+        downloadMobile: "",
+
+        downloadPc: "",
+
+        gallery: [
+            "hollow-knight-1.jpg",
+            "hollow-knight-2.jpg"
+        ]
+    },
+
+
+{
+        id: "gta-3",
+
+        title: "GTA 3",
+
+        image: "gta-3.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "538.76MB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/l1j15jhed10gp9s",
+
+        gallery: [
+            "gta-3-1.jpg",
+            "gta-3-2.jpg"
+        ]
+    },
+
+{
+        id: "cuphead",
+
+        title: "Cuphead",
+
+        image: "cuphead.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "4.5GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/vctk3mxbegot85b/Cuphead%252BDLC_%2528PT-BR_1.3.4%2529_By-RuDroid777.rar/file",
+
+        gallery: [
+            "cuphead-1.jpg",
+            "cuphead-2.jpg"
+        ]
+    },
+
+{
+        id: "60-seconds",
+
+        title: "60 Seconds!",
+
+        image: "60-seconds.jpg",
+
+        category: ["Estratégia"],
+
+        platform: "pc",
+
+        featured: false,
+
+        size: "348.55MB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/drbucjhchyro239",
+
+        gallery: [
+            "60-seconds-1.jpg",
+            "60-seconds-2.jpg"
+        ]
+    },
+
+{
     id: "gta-san-andreas",
 
     title: "GTA San Andreas: PT-BR",
@@ -1627,6 +1780,33 @@ const games = [
         "gta-san-andreas-1.jpg",
         "gta-san-andreas-2.jpg",
         "gta-san-andreas-3.jpg"
+    ]
+},
+
+{
+    id: "bully",
+
+    title: "Bully",
+
+    image: "bully.jpg",
+
+    category: ["Ação", "Aventura"],
+
+    platform: "android",
+
+    featured: true,
+
+    size: "1.98GB",
+
+    downloadAndroid: "https://www.mediafire.com/download/0j2hmyq7hgb2uqn",
+
+    downloadMobile: "",
+
+    downloadPc: "",
+
+    gallery: [
+        "bully-1.jpg",
+        "bully-2.jpg"
     ]
 },
 
@@ -1810,13 +1990,24 @@ function createGameCard(game) {
 
     const downloadAvailable =
     Boolean(
-        game.platform === "android"
-            ? game.downloadAndroid &&
-              game.downloadAndroid !== "#"
-            : game.downloadMobile &&
-              game.downloadMobile !== "#"
-    );
+        (
+            game.platform === "mobile" &&
+            game.downloadMobile &&
+            game.downloadMobile !== "#"
+        ) ||
 
+        (
+            game.platform === "pc" &&
+            game.downloadPc &&
+            game.downloadPc !== "#"
+        ) ||
+
+        (
+            game.platform === "android" &&
+            game.downloadAndroid &&
+            game.downloadAndroid !== "#"
+        )
+    );
 
     card.innerHTML = `
 
@@ -1833,7 +2024,7 @@ function createGameCard(game) {
         game.platform === "mobile"
             ? "📱 PSP"
             : game.platform === "pc"
-                ? "🖥️ PSP para PC"
+                ? "🖥️ PC"
                 : "📱 Celular"
     }
 </span>
@@ -2305,7 +2496,7 @@ function openGameModal(game) {
 } else if (game.platform === "pc") {
 
     modalPlatform.textContent =
-        "🖥️ PSP para PC";
+        "🖥️ Jogos para PC";
 
 } else if (game.platform === "android") {
 
@@ -2330,7 +2521,6 @@ function openGameModal(game) {
     /* DOWNLOADS */
 
     renderModalDownloads(game);
-
 
     /* =================================================
        GALERIA
@@ -2473,6 +2663,37 @@ if (
 
 }
 
+/* DOWNLOAD PC */
+
+if (
+    game.platform === "pc" &&
+    game.downloadPc &&
+    game.downloadPc !== "#"
+) {
+
+    const pcButton =
+        document.createElement("a");
+
+    pcButton.href =
+        game.downloadPc;
+
+    pcButton.target =
+        "_blank";
+
+    pcButton.rel =
+        "noopener noreferrer";
+
+    pcButton.className =
+        "modal-download-button";
+
+    pcButton.innerHTML =
+        "🖥️ Download PC";
+
+    modalDownloads.appendChild(
+        pcButton
+    );
+
+}
 
 /* DOWNLOAD PSP PARA CELULAR */
 
@@ -2504,44 +2725,6 @@ if (
         mobileButton
     );
 }
-
-
-    /* PC */
-
-    if (
-        game.downloadPc &&
-        game.downloadPc !== "#"
-    ) {
-
-        const pcButton =
-            document.createElement("a");
-
-
-        pcButton.href =
-            game.downloadPc;
-
-
-        pcButton.target =
-            "_blank";
-
-
-        pcButton.rel =
-            "noopener noreferrer";
-
-
-        pcButton.className =
-            "modal-download-button";
-
-
-        pcButton.innerHTML =
-            "🖥️ Download PC";
-
-
-        modalDownloads.appendChild(
-            pcButton
-        );
-
-    }
 
 
     /* NENHUM */
