@@ -1679,6 +1679,32 @@ const games = [
         ]
     },
 
+{
+        id: "terraria",
+
+        title: "Terraria: PT-BR",
+
+        image: "terraria.jpg",
+
+        category: ["Ação", "Aventura"],
+
+        platform: "android",
+
+        featured: true,
+
+        size: "170.52MB",
+
+        downloadAndroid: "https://www.mediafire.com/file/cfzszgbweh8qy5v/Terraria_v.1.4.5_%255BErkration_Jr%255D.apk/file",
+
+        downloadMobile: "",
+
+        downloadPc: "",
+
+        gallery: [
+            "terraria-1.jpg",
+            "terraria-2.jpg"
+        ]
+    },
 
 {
         id: "gta-3",
