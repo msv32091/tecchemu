@@ -2007,4 +2007,109 @@ body.modal-open {
 
     transform: scale(0.92);
 
+}/* =====================================================
+   AVISO - JOGOS PARA CELULAR
+===================================================== */
+
+.mobile-warning {
+    width: 100%;
+    display: none;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 14px;
+    padding: 16px 20px;
+
+    background: rgba(255, 193, 7, 0.10);
+    border: 1px solid rgba(255, 193, 7, 0.45);
+    border-radius: var(--radius);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.18);
+
+    animation: mobileWarningIn 0.3s ease;
+}
+
+.mobile-warning.visible {
+    display: flex;
+}
+
+.mobile-warning-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 193, 7, 0.15);
+
+    font-size: 20px;
+}
+
+.mobile-warning-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-warning-content strong {
+    color: #ffc107;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+}
+
+.mobile-warning-content p {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.mobile-warning-content b {
+    color: #ffffff;
+}
+
+@keyframes mobileWarningIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .mobile-warning {
+        align-items: flex-start;
+        padding: 14px;
+        gap: 11px;
+    }
+
+    .mobile-warning-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .mobile-warning-content strong {
+        font-size: 10px;
+    }
+
+    .mobile-warning-content p {
+        font-size: 11px;
+    }
+
 }

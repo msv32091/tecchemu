@@ -1866,6 +1866,9 @@ const noResults =
 const searchResultText =
     document.getElementById("searchResultText");
 
+const mobileWarning =
+    document.getElementById("mobileWarning");
+
 const menuButton =
     document.getElementById("menuButton");
 
@@ -1950,6 +1953,25 @@ let currentGalleryImages = [];
 
 let currentGalleryIndex = 0;
 
+/* =====================================================
+   AVISO - JOGOS PARA CELULAR
+===================================================== */
+
+function updateMobileWarning() {
+
+    if (!mobileWarning) return;
+
+    if (currentPlatform === "android") {
+
+        mobileWarning.classList.add("visible");
+
+    } else {
+
+        mobileWarning.classList.remove("visible");
+
+    }
+
+}
 
 /* =====================================================
    NORMALIZAR TEXTO
@@ -2389,10 +2411,12 @@ platformButtons.forEach(button => {
             );
 
 
-            currentPlatform =
+        currentPlatform =
     button.dataset.platform;
 
 updateGameCount();
+
+updateMobileWarning();
 
 
 if (
@@ -2966,6 +2990,8 @@ galleryPrev.addEventListener(
 ===================================================== */
 
 updateGameCount();
+
+updateMobileWarning();
 
 renderFeatured();
 
