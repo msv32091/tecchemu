@@ -1630,7 +1630,7 @@ const games = [
 {
         id: "hollow-knight",
 
-        title: "Hollow Knight - PT-BR",
+        title: "Hollow Knight: PT-BR",
 
         image: "hollow-knight.jpg",
 
@@ -1655,7 +1655,7 @@ const games = [
 {
         id: "hollow-knight-mobile",
 
-        title: "Hollow Knight Mobile - PT-BR",
+        title: "Hollow Knight Mobile: PT-BR",
 
         image: "hollow-knight.jpg",
 
@@ -1683,7 +1683,7 @@ const games = [
 {
         id: "gta-3",
 
-        title: "GTA 3",
+        title: "GTA 3: PT-BR",
 
         image: "gta-3.jpg",
 
@@ -1708,7 +1708,7 @@ const games = [
 {
         id: "cuphead",
 
-        title: "Cuphead",
+        title: "Cuphead: PT-BR",
 
         image: "cuphead.jpg",
 
@@ -1733,7 +1733,7 @@ const games = [
 {
         id: "60-seconds",
 
-        title: "60 Seconds!",
+        title: "60 Seconds!: PT-BR",
 
         image: "60-seconds.jpg",
 
