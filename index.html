@@ -89,6 +89,23 @@
 
         </nav>
 
+<div class="notification-container">
+
+    <button
+        class="notification-button"
+        id="notificationButton"
+        aria-label="Ver novidades"
+    >
+        🔔
+
+        <span
+            class="notification-badge"
+            id="notificationBadge"
+        ></span>
+
+    </button>
+
+</div>
 
         <button
             class="menu-button"
@@ -664,6 +681,59 @@
     </div>
 
 </div>
+
+<!-- =====================================================
+     MODAL DE NOTIFICAÇÕES
+===================================================== -->
+
+<div
+    class="notifications-modal"
+    id="notificationsModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="notifications-overlay"
+        id="notificationsOverlay"
+    ></div>
+
+
+    <div class="notifications-box">
+
+        <div class="notifications-header">
+
+            <div>
+
+                <h2>🔔 Novidades</h2>
+
+                <p>
+                    Veja as últimas atualizações
+                    da TechEmu!
+                </p>
+
+            </div>
+
+
+            <button
+                class="notifications-close"
+                id="notificationsClose"
+                aria-label="Fechar notificações"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="notifications-list"
+            id="notificationsList"
+        ></div>
+
+    </div>
+
+</div>
+
 
 
 

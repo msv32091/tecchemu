@@ -1810,6 +1810,61 @@ const games = [
 },
 
 {
+    id: "lego-batman",
+
+    title: "LEGO Batman: The Videogame",
+
+    image: "lego-batman.jpg",
+
+    category: ["Ação", "Aventura"],
+
+    platform: "mobile",
+
+    featured: true,
+
+    size: "519.12MB",
+
+    downloadAndroid: "",
+
+    downloadMobile: "https://www.mediafire.com/file/a2abep7mxp3uu4d/LEGO+Batman+-+Game.7z/file",
+
+    downloadPc: "",
+
+    gallery: [
+        "lego-batman-1.jpg",
+        "lego-batman-2.jpg"
+    ]
+},
+
+
+{
+    id: "lego-batman-2",
+
+    title: "LEGO Batman 2: DC Super Heroes",
+
+    image: "lego-batman-2-dc-super-heroes.jpg",
+
+    category: ["Ação", "Aventura"],
+
+    platform: "android",
+
+    featured: true,
+
+    size: "1.02GB",
+
+    downloadAndroid: "https://www.mediafire.com/file/o0tx2lo10ppdkvv/LEGO-Batman-2-DC-Super-Heroes-Mobile.apk/file?dkey=iy1mdbdvgsd&r=1250&dkey=o0tx2lo10ppdkvv",
+
+    downloadMobile: "",
+
+    downloadPc: "",
+
+    gallery: [
+        "lego-batman-2-dc-super-heroes-1.jpg",
+        "lego-batman-2-dc-super-heroes-2.jpg"
+    ]
+},
+
+{
     id: "bully",
 
     title: "Bully",
@@ -1978,6 +2033,124 @@ let currentGame = null;
 let currentGalleryImages = [];
 
 let currentGalleryIndex = 0;
+
+/* =====================================================
+   SISTEMA DE NOTIFICAÇÕES
+===================================================== */
+
+const notificationButton =
+    document.getElementById(
+        "notificationButton"
+    );
+
+const notificationBadge =
+    document.getElementById(
+        "notificationBadge"
+    );
+
+const notificationsModal =
+    document.getElementById(
+        "notificationsModal"
+    );
+
+const notificationsOverlay =
+    document.getElementById(
+        "notificationsOverlay"
+    );
+
+const notificationsClose =
+    document.getElementById(
+        "notificationsClose"
+    );
+
+const notificationsList =
+    document.getElementById(
+        "notificationsList"
+    );
+
+
+/* =====================================================
+   VERSÃO DAS NOVIDADES
+
+   IMPORTANTE:
+
+   Sempre que você adicionar novas
+   novidades na TechEmu, altere
+   este número.
+
+   Exemplo:
+
+   1 → 2
+   2 → 3
+===================================================== */
+
+const NEWS_VERSION = 1;
+
+
+/* =====================================================
+   NOVIDADES
+===================================================== */
+
+const notifications = [
+
+
+{
+        type: "game",
+
+        title:
+            "NOVO JOGO NA TECHEMU!",
+
+        gameName:
+            "LEGO Batman: The Videogame",
+
+        platform:
+            "📱 PSP para Celular",
+
+        image:
+            "lego-batman.jpg",
+
+        date:
+            "07/09/2026"
+    },
+
+
+    {
+        type: "game",
+
+        title:
+            "NOVO JOGO NA TECHEMU!",
+
+        gameName:
+            "LEGO Batman 2: DC super Heroes",
+
+        platform:
+            "📱 Jogos para Celular",
+
+        image:
+            "lego-batman-2-dc-super-heroes.jpg",
+
+        date:
+            "07/09/2026"
+    },
+
+
+    {
+        type: "normal",
+
+        icon:
+            "🔔",
+
+        title:
+            "Novo sistema de atualizações!",
+
+        description:
+            "Agora a plataforma possui o botão de novidades, aqui será anunciado todos os novos jogos do site!",
+
+        date:
+            "07/09/2026."
+    }
+
+];
 
 /* =====================================================
    AVISO - JOGOS PARA CELULAR
@@ -3010,14 +3183,326 @@ galleryPrev.addEventListener(
     }
 );
 
+/* =====================================================
+   RENDERIZAR NOTIFICAÇÕES
+===================================================== */
+
+function renderNotifications() {
+
+    if (!notificationsList) return;
+
+
+    notificationsList.innerHTML = "";
+
+
+    notifications.forEach(
+        notification => {
+
+            const item =
+                document.createElement(
+                    "article"
+                );
+
+
+            item.className =
+                "notification-item";
+
+
+            /* =============================================
+               NOTIFICAÇÃO DE NOVO JOGO
+            ============================================= */
+
+            if (
+                notification.type === "game"
+            ) {
+
+                item.classList.add(
+                    "notification-game"
+                );
+
+
+                item.innerHTML = `
+
+                    <div
+                        class="notification-game-image"
+                    >
+
+                        <img
+                            src="assets/jogos/${notification.image}"
+                            alt="${notification.gameName}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="notification-content"
+                    >
+
+                        <span
+                            class="notification-new-label"
+                        >
+                            🆕 NOVO JOGO
+                        </span>
+
+
+                        <h3>
+                            ${notification.title}
+                        </h3>
+
+
+                        <h4
+                            class="notification-game-name"
+                        >
+                            ${notification.gameName}
+                        </h4>
+
+
+                        <div
+                            class="notification-game-platform"
+                        >
+                            ${notification.platform}
+                        </div>
+
+
+                        <span
+                            class="notification-date"
+                        >
+                            ${notification.date}
+                        </span>
+
+                    </div>
+
+                `;
+
+
+            }
+
+
+            /* =============================================
+               NOTIFICAÇÃO NORMAL
+            ============================================= */
+
+            else {
+
+                item.innerHTML = `
+
+                    <div
+                        class="notification-icon"
+                    >
+                        ${notification.icon}
+                    </div>
+
+
+                    <div
+                        class="notification-content"
+                    >
+
+                        <h3>
+                            ${notification.title}
+                        </h3>
+
+
+                        <p>
+                            ${notification.description}
+                        </p>
+
+
+                        <span
+                            class="notification-date"
+                        >
+                            ${notification.date}
+                        </span>
+
+                    </div>
+
+                `;
+
+            }
+
+
+            /* =============================================
+               ERRO NA IMAGEM
+            ============================================= */
+
+            const image =
+                item.querySelector(
+                    ".notification-game-image img"
+                );
+
+
+            if (image) {
+
+                image.addEventListener(
+                    "error",
+                    () => {
+
+                        image.src =
+                            "assets/logo.png";
+
+                    }
+                );
+
+            }
+
+
+            notificationsList.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   VERIFICAR SE EXISTEM NOVIDADES
+===================================================== */
+
+function checkNotifications() {
+
+    const seenVersion =
+        localStorage.getItem(
+            "techemuNewsVersion"
+        );
+
+
+    if (
+        seenVersion !==
+        String(NEWS_VERSION)
+    ) {
+
+        notificationBadge.classList.remove(
+            "hidden"
+        );
+
+    } else {
+
+        notificationBadge.classList.add(
+            "hidden"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   ABRIR NOTIFICAÇÕES
+===================================================== */
+
+function openNotifications() {
+
+    notificationsModal.classList.add(
+        "active"
+    );
+
+
+    notificationsModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "modal-open"
+    );
+
+
+    /* MARCAR COMO VISUALIZADAS */
+
+    localStorage.setItem(
+        "techemuNewsVersion",
+        NEWS_VERSION
+    );
+
+
+    notificationBadge.classList.add(
+        "hidden"
+    );
+
+}
+
+
+/* =====================================================
+   FECHAR NOTIFICAÇÕES
+===================================================== */
+
+function closeNotifications() {
+
+    notificationsModal.classList.remove(
+        "active"
+    );
+
+
+    notificationsModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "modal-open"
+    );
+
+}
+
+
+/* =====================================================
+   EVENTOS
+===================================================== */
+
+notificationButton.addEventListener(
+    "click",
+    openNotifications
+);
+
+
+notificationsClose.addEventListener(
+    "click",
+    closeNotifications
+);
+
+
+notificationsOverlay.addEventListener(
+    "click",
+    closeNotifications
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            notificationsModal.classList.contains(
+                "active"
+            )
+        ) {
+
+            closeNotifications();
+
+        }
+
+    }
+);
 
 /* =====================================================
    INICIALIZAÇÃO
 ===================================================== */
 
-updateGameCount();
+/* =====================================================
+   INICIALIZAÇÃO
+===================================================== */
 
-updateMobileWarning();
+renderNotifications();
+
+checkNotifications();
+
+updateGameCount();
 
 renderFeatured();
 
