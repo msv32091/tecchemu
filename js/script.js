@@ -1868,7 +1868,7 @@ const notificationsList =
    2 → 3
 ===================================================== */
 
-const NEWS_VERSION = 3;
+const NEWS_VERSION = 4;
 
 
 /* =====================================================
@@ -1876,6 +1876,22 @@ const NEWS_VERSION = 3;
 ===================================================== */
 
 const notifications = [
+
+{
+        type: "normal",
+
+        icon:
+            "🎨",
+
+        title:
+            "Novo sistema de personalização!",
+
+        description:
+            "Agora você pode deixar a TechEmu do seu jeitinho!",
+
+        date:
+            "10/09/2026."
+    },
 
 {
         type: "normal",
