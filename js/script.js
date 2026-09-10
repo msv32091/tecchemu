@@ -4159,4 +4159,242 @@ backToTop.addEventListener(
         });
 
     }
+);/* =====================================================
+   SISTEMA DE PERSONALIZAÇÃO
+===================================================== */
+
+const customizer =
+    document.getElementById("customizer");
+
+const customizeButton =
+    document.getElementById("customizeButton");
+
+const customizerClose =
+    document.getElementById("customizerClose");
+
+const customizerOverlay =
+    document.getElementById("customizerOverlay");
+
+const customizerReset =
+    document.getElementById("customizerReset");
+
+const colorOptions =
+    document.querySelectorAll(".color-option");
+
+
+/* =====================================================
+   ABRIR
+===================================================== */
+
+if (customizeButton) {
+
+    customizeButton.addEventListener(
+        "click",
+        () => {
+
+            customizer.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FECHAR
+===================================================== */
+
+function closeCustomizer() {
+
+    customizer.classList.remove(
+        "active"
+    );
+
+}
+
+
+if (customizerClose) {
+
+    customizerClose.addEventListener(
+        "click",
+        closeCustomizer
+    );
+
+}
+
+
+if (customizerOverlay) {
+
+    customizerOverlay.addEventListener(
+        "click",
+        closeCustomizer
+    );
+
+}
+
+
+/* =====================================================
+   ESC
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape" &&
+            customizer.classList.contains("active")
+        ) {
+
+            closeCustomizer();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   APLICAR COR
+===================================================== */
+
+function applyTechEmuColor(color) {
+
+    /* ========================================
+       ALTERA A COR DO SITE
+    ======================================== */
+
+    document.body.classList.remove(
+        "theme-purple",
+        "theme-blue",
+        "theme-green",
+        "theme-red",
+        "theme-orange"
+    );
+
+    document.body.classList.add(`theme-${color}`);
+
+
+    /* ========================================
+       ATUALIZA A BOLINHA ATIVA
+    ======================================== */
+
+    colorOptions.forEach(option => {
+
+        option.classList.toggle(
+            "active",
+            option.dataset.color === color
+        );
+
+    });
+
+
+    /* ========================================
+       TROCA A LOGO COM ANIMAÇÃO
+    ======================================== */
+
+    const logo = document.querySelector(".logo");
+
+    const logoFiles = {
+        purple: "assets/logo-purple.png",
+        blue: "assets/logo-blue.png",
+        green: "assets/logo-green.png",
+        red: "assets/logo-red.png",
+        orange: "assets/logo-orange.png"
+    };
+
+    if (logo && logoFiles[color]) {
+
+        /* Faz a logo desaparecer */
+
+        logo.classList.add("logo-changing");
+
+
+        /* Espera a animação de saída */
+
+        setTimeout(() => {
+
+            logo.src = logoFiles[color];
+
+
+            /* Faz a nova logo aparecer */
+
+            requestAnimationFrame(() => {
+
+                logo.classList.remove("logo-changing");
+
+            });
+
+        }, 250);
+
+    }
+
+
+    /* ========================================
+       SALVA A COR ESCOLHIDA
+    ======================================== */
+
+    localStorage.setItem(
+        "techEmuColor",
+        color
+    );
+}
+
+
+/* =====================================================
+   CLICAR NAS CORES
+===================================================== */
+
+colorOptions.forEach(
+    option => {
+
+        option.addEventListener(
+            "click",
+            () => {
+
+                applyTechEmuColor(
+                    option.dataset.color
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   RESTAURAR PADRÃO
+===================================================== */
+
+if (customizerReset) {
+
+    customizerReset.addEventListener(
+        "click",
+        () => {
+
+            applyTechEmuColor(
+                "purple"
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CARREGAR COR SALVA
+===================================================== */
+
+const savedTechEmuColor =
+    localStorage.getItem(
+        "techEmuColor"
+    ) || "purple";
+
+
+applyTechEmuColor(
+    savedTechEmuColor
 );
