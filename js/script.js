@@ -251,34 +251,14 @@ const games = [
 
         size: "A informar",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/80rbgwgoh64vrj2/Dragon_Ball_Z_-_Shin_Budokai.7z/file?dkey=ug0u1mqw8y9&r=1716",
 
         downloadPc: "",
 
-        gallery: []
-    },
-
-
-    {
-        id: "dragon-ball-z-shin-budokai-another-road",
-
-        title: "Dragon Ball Z: Shin Budokai - Another Road",
-
-        image: "dragon-ball-z-shin-budokai-another-road.jpg",
-
-        category: ["Luta", "Anime"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
+        gallery: [
+            "dragon-ball-z-shin-budokai-1.jpg",
+            "dragon-ball-z-shin-budokai-2-2-2.jpg"
+        ]
     },
 
 
@@ -517,29 +497,6 @@ const games = [
 
 
     {
-        id: "bomba-patch-2026",
-
-        title: "Bomba Patch 2026",
-
-        image: "bomba-patch-2026.jpg",
-
-        category: ["Esportes"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
         id: "fifa-14",
 
         title: "FIFA 14",
@@ -646,7 +603,7 @@ const games = [
     {
         id: "monster-hunter-portable-3rd",
 
-        title: "Monster Hunter Portable 3rd PT-BR",
+        title: "Monster Hunter Portable 3rd",
 
         image: "monster-hunter-portable-3rd.jpg",
 
@@ -656,13 +613,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "1.11GB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/5m5lsy2zei8s9pv/Monster+Hunter+Portable+3RD+HD+++DLCs+by+Lis.rar/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "monster-hunter-portable-3rd-1.jpg",
+            "monster-hunter-portable-3rd-2.jpg"
+        ]
     },
 
 
@@ -689,29 +649,6 @@ const games = [
             "monster-hunter-freedom-unite-1.jpg",
             "monster-hunter-freedom-unite-2.jpg"
         ]
-    },
-
-
-    {
-        id: "monster-hunter-freedom-2",
-
-        title: "Monster Hunter Freedom 2",
-
-        image: "monster-hunter-freedom-2.jpg",
-
-        category: ["Ação", "RPG"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
     },
 
 
@@ -962,13 +899,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "685.57MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/s3n4zf84q7xv5lv/NBA+2K13+(USA).7z/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "nba-2k13-1.jpg",
+            "nba-2k13-2.jpg"
+        ]
     },
 
 
@@ -1077,29 +1017,6 @@ const games = [
 
 
     {
-        id: "street-fighter-alpha-3-max",
-
-        title: "Street Fighter Alpha 3 MAX",
-
-        image: "street-fighter-alpha-3-max.jpg",
-
-        category: ["Luta"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
         id: "need-for-speed-undercover",
 
         title: "Need for Speed: Undercover",
@@ -1122,29 +1039,6 @@ const games = [
             "need-for-speed-undercover-1.jpg",
             "need-for-speed-undercover-2.jpg"
         ]
-    },
-
-
-    {
-        id: "need-for-speed-shift",
-
-        title: "Need for Speed: Shift",
-
-        image: "need-for-speed-shift.jpg",
-
-        category: ["Corrida"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
     },
 
 
@@ -1201,29 +1095,6 @@ const games = [
 
 
     {
-        id: "crazy-taxi-fare-wars",
-
-        title: "Crazy Taxi: Fare Wars",
-
-        image: "crazy-taxi-fare-wars.jpg",
-
-        category: ["Corrida"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
         id: "lego-indiana-jones-2",
 
         title: "LEGO Indiana Jones 2: The Adventure Continues",
@@ -1250,11 +1121,11 @@ const games = [
 
 
     {
-        id: "lego-star-wars-2",
+        id: "lego-star-wars-3-the-clone-wars",
 
-        title: "LEGO Star Wars II: The Original Trilogy PT-BR",
+        title: "LEGO Star Wars III: The Clone Wars",
 
-        image: "lego-star-wars-2.jpg",
+        image: "lego-star-wars-3-the-clone-wars.jpg",
 
         category: ["Aventura"],
 
@@ -1262,13 +1133,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "1.25GB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/6dhngulh4s9rhbf/PSP_GAME_ISO_%252345.rar/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "lego-star-wars-3-the-clone-wars-1.jpg",
+            "lego-star-wars-3-the-clone-wars-2.jpg"
+        ]
     },
 
 
@@ -1285,36 +1159,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "892.59MB",
 
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
-        id: "winning-eleven-2009",
-
-        title: "World Soccer Winning Eleven 2009",
-
-        image: "winning-eleven-2009.jpg",
-
-        category: ["Esportes"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/jzxatvooefc4rgo/Crash+Tag+Team+Racing+(USA)+(v1.01).zip/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "crash-tag-team-racing-1.jpg",
+            "crash-tag-team-racing-2.jpg"
+        ]
     },
 
 
@@ -1371,52 +1225,6 @@ const games = [
 
 
     {
-        id: "metal-gear-solid-peace-walker",
-
-        title: "Metal Gear Solid: Peace Walker",
-
-        image: "metal-gear-solid-peace-walker.jpg",
-
-        category: ["Ação"],
-
-        platform: "mobile",
-
-        featured: true,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
-        id: "littlebigplanet",
-
-        title: "LittleBigPlanet",
-
-        image: "littlebigplanet.jpg",
-
-        category: ["Aventura"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
         id: "street-fighter-zero-3",
 
         title: "Street Fighter Zero 3: Double Upper",
@@ -1429,13 +1237,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "258.84MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/69m33wlmnjvm7bv/Street_Fighter_Zero_3_Double_Upper.iso/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "street-fighter-zero-3-1.jpg",
+            "street-fighter-zero-3-2.jpg"
+        ]
     },
 
 
@@ -1478,36 +1289,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "734.94MB",
 
-        downloadMobile: "",
-
-        downloadPc: "",
-
-        gallery: []
-    },
-
-
-    {
-        id: "metal-slug-xx",
-
-        title: "Metal Slug XX",
-
-        image: "metal-slug-xx.jpg",
-
-        category: ["Ação", "Luta"],
-
-        platform: "mobile",
-
-        featured: false,
-
-        size: "A informar",
-
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/xl6d5bx2h2of13f/Metal+Slug+Anthology.7z/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "metal-slug-anthology-1.jpg",
+            "metal-slug-anthology-2.jpg"
+        ]
     },
 
 
@@ -1524,13 +1315,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "159.81MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/wza890kjjc2tq2c/ATT+FIGHT_NIGHT_ROUND_3.7z",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "fight-night-round-3-1.jpg",
+            "fight-night-round-3-2.jpg"
+        ]
     },
 
 
@@ -1547,13 +1341,16 @@ const games = [
 
         featured: true,
 
-        size: "A informar",
+        size: "731.96MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/yzs9rx1eq8848mb/Tekken+6.7z/file?dkey=9h0nwl8qild&r=738",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "tekken-6-1.jpg",
+            "tekken-6-2.jpg"
+        ]
     },
 
 
@@ -1570,13 +1367,16 @@ const games = [
 
         featured: false,
 
-        size: "A informar",
+        size: "329.76MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/42cngwlqkyaevy4/Call_of_Duty_-_Roads_to_Victory_%2528Europe%2529.7z/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "call-of-duty-roads-to-victory-1.jpg",
+            "call-of-duty-roads-to-victory-2.jpg"
+        ]
     },
 
 
@@ -1593,13 +1393,16 @@ const games = [
 
         featured: true,
 
-        size: "A informar",
+        size: "472.02MB",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/jlj1jn2bd4d9529/Assassin's+Creed+-+Bloodlines+(USA)+(En,Fr,De,Es,It).7z/file",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "assassins-creed-bloodlines-1.jpg",
+            "assassins-creed-bloodlines-2.jpg"
+        ]
     },
 
 {
@@ -1651,6 +1454,7 @@ const games = [
             "hollow-knight-2.jpg"
         ]
     },
+
 
 {
         id: "hollow-knight-mobile",
@@ -1794,9 +1598,9 @@ const games = [
 
     featured: true,
 
-    size: "3.24GB",
+    size: "1.63GB",
 
-    downloadAndroid: "https://www.mediafire.com/file/cshzmbej7jjg07q/GTA_SA_V2.11.311_DUBLADO_E_TRADUZIDO_PT_BR_%2528MOD_MENU%2529_ATUALIZADO.zip/file?dkey=cshzmbej7jjg07q",
+    downloadAndroid: "https://www.mediafire.com/file/sckc9fkvubie9j2/gtasandresapk.com.gta.7z/file",
 
     downloadMobile: "",
 
@@ -1864,32 +1668,6 @@ const games = [
     ]
 },
 
-{
-    id: "bully",
-
-    title: "Bully",
-
-    image: "bully.jpg",
-
-    category: ["Ação", "Aventura"],
-
-    platform: "android",
-
-    featured: false,
-
-    size: "1.98GB",
-
-    downloadAndroid: "",
-
-    downloadMobile: "",
-
-    downloadPc: "",
-
-    gallery: [
-        "bully-1.jpg",
-        "bully-2.jpg"
-    ]
-},
 
     {
         id: "wwe-smackdown-vs-raw-2010",
@@ -1906,11 +1684,14 @@ const games = [
 
         size: "A informar",
 
-        downloadMobile: "",
+        downloadMobile: "https://www.mediafire.com/file/h5z5xey76nn9evo",
 
         downloadPc: "",
 
-        gallery: []
+        gallery: [
+            "wwe-smackdown-vs-raw-2010-1.jpg",
+            "wwe-smackdown-vs-raw-2010-2.jpg"
+        ]
     }
 
 ];
@@ -1949,6 +1730,9 @@ const searchResultText =
 
 const mobileWarning =
     document.getElementById("mobileWarning");
+
+const pcWarning =
+    document.getElementById("pcWarning");
 
 const menuButton =
     document.getElementById("menuButton");
@@ -2084,7 +1868,7 @@ const notificationsList =
    2 → 3
 ===================================================== */
 
-const NEWS_VERSION = 1;
+const NEWS_VERSION = 3;
 
 
 /* =====================================================
@@ -2093,6 +1877,53 @@ const NEWS_VERSION = 1;
 
 const notifications = [
 
+{
+        type: "normal",
+
+        icon:
+            "🎮",
+
+        title:
+            "Todos os jogos disponivéis!",
+
+        description:
+            "Agora todos os jogos do site estão disponivéis para download! Nenhum jogo estará (Em Breve)!",
+
+        date:
+            "09/09/2026."
+    },
+
+{
+        type: "normal",
+
+        icon:
+            "🔼",
+
+        title:
+            "Novo botão para voltar ao topo do site!",
+
+        description:
+            "Agora será muito mais fácil retornar ao topo apenas clicando no botão do canto inferior direito (⬆).",
+
+        date:
+            "08/09/2026."
+    },
+
+{
+        type: "normal",
+
+        icon:
+            "📖",
+
+        title:
+            "Novo sistema de tutorial!",
+
+        description:
+            "Agora será muito mais fácil navegar pela TechEmu com o novo sistema de guia!",
+
+        date:
+            "08/09/2026."
+    },
 
 {
         type: "game",
@@ -2158,15 +1989,32 @@ const notifications = [
 
 function updateMobileWarning() {
 
-    if (!mobileWarning) return;
+    if (mobileWarning) {
 
-    if (currentPlatform === "android") {
+        if (currentPlatform === "android") {
 
-        mobileWarning.classList.add("visible");
+            mobileWarning.classList.add("visible");
 
-    } else {
+        } else {
 
-        mobileWarning.classList.remove("visible");
+            mobileWarning.classList.remove("visible");
+
+        }
+
+    }
+
+
+    if (pcWarning) {
+
+        if (currentPlatform === "pc") {
+
+            pcWarning.classList.add("visible");
+
+        } else {
+
+            pcWarning.classList.remove("visible");
+
+        }
 
     }
 
@@ -2243,7 +2091,7 @@ function createGameCard(game) {
             <span class="game-platform">
     ${
         game.platform === "mobile"
-            ? "📱 PSP"
+            ? "🎮 PSP"
             : game.platform === "pc"
                 ? "🖥️ PC"
                 : "📱 Celular"
@@ -2714,7 +2562,7 @@ function openGameModal(game) {
     if (game.platform === "mobile") {
 
     modalPlatform.textContent =
-        "📱 PSP para Celular";
+        "🎮 PSP para Celular";
 
 } else if (game.platform === "pc") {
 
@@ -2942,7 +2790,7 @@ if (
         "modal-download-button";
 
     mobileButton.innerHTML =
-        "📱 Download PSP";
+        "🎮 Download PSP";
 
     modalDownloads.appendChild(
         mobileButton
@@ -3507,3 +3355,808 @@ updateGameCount();
 renderFeatured();
 
 renderAllGames();
+
+/* =====================================================
+   TUTORIAL GUIADO DA TECHEMU
+===================================================== */
+
+
+/* ELEMENTOS */
+
+const tutorial =
+    document.getElementById(
+        "tutorial"
+    );
+
+
+const tutorialHighlight =
+    document.getElementById(
+        "tutorialHighlight"
+    );
+
+
+const tutorialArrow =
+    document.getElementById(
+        "tutorialArrow"
+    );
+
+
+const tutorialBox =
+    document.getElementById(
+        "tutorialBox"
+    );
+
+
+const tutorialProgress =
+    document.getElementById(
+        "tutorialProgress"
+    );
+
+
+const tutorialIcon =
+    document.getElementById(
+        "tutorialIcon"
+    );
+
+
+const tutorialTitle =
+    document.getElementById(
+        "tutorialTitle"
+    );
+
+
+const tutorialDescription =
+    document.getElementById(
+        "tutorialDescription"
+    );
+
+
+const tutorialNext =
+    document.getElementById(
+        "tutorialNext"
+    );
+
+
+const tutorialBack =
+    document.getElementById(
+        "tutorialBack"
+    );
+
+
+const tutorialSkip =
+    document.getElementById(
+        "tutorialSkip"
+    );
+
+
+const tutorialClose =
+    document.getElementById(
+        "tutorialClose"
+    );
+
+
+const tutorialRestart =
+    document.getElementById(
+        "tutorialRestart"
+    );
+
+
+/* =====================================================
+   ETAPAS DO TUTORIAL
+===================================================== */
+
+const tutorialSteps = [
+
+    {
+
+        target:
+            "#tutorialCategories",
+
+        icon:
+            "🎮",
+
+        title:
+            "Escolha sua plataforma",
+
+        description:
+            "Aqui você pode escolher a categoria de jogos que deseja explorar. Selecione PSP para Celular, Jogos para PC ou Jogos para Celular."
+
+    },
+
+
+    {
+
+        target:
+            "#tutorialSearch",
+
+        icon:
+            "🔎",
+
+        title:
+            "Pesquise seus jogos",
+
+        description:
+            "Digite o nome de um jogo nesta barra para encontrá-lo rapidamente no catálogo da TechEmu."
+
+    },
+
+
+    {
+
+        target:
+            "#allGames .game-card",
+
+        icon:
+            "📥",
+
+        title:
+            "Veja os detalhes do jogo",
+
+        description:
+            "Encontrou um jogo interessante? Clique em Ver detalhes para visualizar informações, imagens e as opções disponíveis."
+
+    },
+
+
+    {
+
+        target:
+            "#menuButton",
+
+        icon:
+            "☰",
+
+        title:
+            "Menu de categorias",
+
+        description:
+            "No celular, utilize este botão para abrir o menu e navegar rapidamente pelas principais categorias da TechEmu."
+
+    },
+
+
+    {
+
+        target:
+            "#notificationButton",
+
+        icon:
+            "🔔",
+
+        title:
+            "Atualizações da TechEmu",
+
+        description:
+            "Clique aqui para descobrir novos jogos, atualizações e outras novidades adicionadas ao site."
+
+    },
+
+
+    {
+
+        target:
+            "#tutorialSocial",
+
+        icon:
+            "📱",
+
+        title:
+            "Acompanhe a TechEmu",
+
+        description:
+            "No final da página você encontra nossas redes sociais. Siga a TechEmu no Instagram, YouTube e entre em nossa comunidade do Discord!"
+
+    }
+
+];
+
+
+/* =====================================================
+   VARIÁVEIS
+===================================================== */
+
+let currentTutorialStep = 0;
+
+
+let tutorialActive = false;
+
+
+/* =====================================================
+   ABRIR TUTORIAL
+===================================================== */
+
+function startTutorial() {
+
+    if (!tutorial) {
+
+        return;
+
+    }
+
+
+    currentTutorialStep = 0;
+
+
+    tutorialActive = true;
+
+
+    tutorial.classList.add(
+        "active"
+    );
+
+
+    document.body.classList.add(
+        "tutorial-open"
+    );
+
+
+    showTutorialStep();
+
+}
+
+
+/* =====================================================
+   FECHAR TUTORIAL
+===================================================== */
+
+function closeTutorial() {
+
+    tutorialActive = false;
+
+
+    tutorial.classList.remove(
+        "active"
+    );
+
+
+    document.body.classList.remove(
+        "tutorial-open"
+    );
+
+
+    localStorage.setItem(
+        "techemuTutorialCompleted",
+        "true"
+    );
+
+}
+
+
+/* =====================================================
+   MOSTRAR ETAPA
+===================================================== */
+
+function showTutorialStep() {
+
+    if (
+        !tutorialActive
+    ) {
+
+        return;
+
+    }
+
+
+    const step =
+        tutorialSteps[
+            currentTutorialStep
+        ];
+
+
+    const target =
+        document.querySelector(
+            step.target
+        );
+
+
+    if (!target) {
+
+        nextTutorialStep();
+
+        return;
+
+    }
+
+
+    /* ATUALIZA TEXTOS */
+
+    tutorialProgress.textContent =
+        `${currentTutorialStep + 1} / ${tutorialSteps.length}`;
+
+
+    tutorialIcon.textContent =
+        step.icon;
+
+
+    tutorialTitle.textContent =
+        step.title;
+
+
+    tutorialDescription.textContent =
+        step.description;
+
+
+    /* BOTÃO ANTERIOR */
+
+    tutorialBack.style.display =
+        currentTutorialStep === 0
+
+            ? "none"
+
+            : "block";
+
+
+    /* ÚLTIMA ETAPA */
+
+    if (
+        currentTutorialStep ===
+        tutorialSteps.length - 1
+    ) {
+
+        tutorialNext.textContent =
+            "Finalizar ✔";
+
+    } else {
+
+        tutorialNext.textContent =
+            "Próximo ▶";
+
+    }
+
+
+    /* ROLA ATÉ O ELEMENTO */
+
+    target.scrollIntoView({
+
+        behavior:
+            "smooth",
+
+        block:
+            "center"
+
+    });
+
+
+    /*
+       ESPERA A ROLAGEM
+       E POSICIONA O DESTAQUE
+    */
+
+    setTimeout(
+        () => {
+
+            positionTutorialTarget(
+                target
+            );
+
+        },
+
+        600
+    );
+
+}
+
+
+/* =====================================================
+   POSICIONAR DESTAQUE
+===================================================== */
+
+function positionTutorialTarget(
+    target
+) {
+
+    if (!tutorialActive) {
+
+        return;
+
+    }
+
+
+    const rect =
+        target.getBoundingClientRect();
+
+
+    const padding = 8;
+
+
+    tutorialHighlight.style.top =
+        `${rect.top - padding}px`;
+
+
+    tutorialHighlight.style.left =
+        `${rect.left - padding}px`;
+
+
+    tutorialHighlight.style.width =
+        `${rect.width + padding * 2}px`;
+
+
+    tutorialHighlight.style.height =
+        `${rect.height + padding * 2}px`;
+
+
+    positionTutorialBox(
+        rect
+    );
+
+}
+
+
+/* =====================================================
+   POSICIONAR CAIXA
+===================================================== */
+
+function positionTutorialBox(
+    rect
+) {
+
+    const margin = 20;
+
+
+    const boxWidth =
+        tutorialBox.offsetWidth;
+
+
+    const boxHeight =
+        tutorialBox.offsetHeight;
+
+
+    let top =
+        rect.bottom + margin;
+
+
+    let left =
+        rect.left +
+        rect.width / 2 -
+        boxWidth / 2;
+
+
+    /*
+       SE NÃO COUBER EMBAIXO
+    */
+
+    if (
+
+        top + boxHeight >
+
+        window.innerHeight - margin
+
+    ) {
+
+        top =
+            rect.top -
+            boxHeight -
+            margin;
+
+    }
+
+
+    /*
+       SE NÃO COUBER EM CIMA
+    */
+
+    if (top < margin) {
+
+        top = margin;
+
+    }
+
+
+    /*
+       LIMITES HORIZONTAIS
+    */
+
+    if (left < margin) {
+
+        left = margin;
+
+    }
+
+
+    if (
+
+        left + boxWidth >
+
+        window.innerWidth - margin
+
+    ) {
+
+        left =
+            window.innerWidth -
+            boxWidth -
+            margin;
+
+    }
+
+
+    tutorialBox.style.top =
+        `${top}px`;
+
+
+    tutorialBox.style.left =
+        `${left}px`;
+
+
+    /*
+       POSIÇÃO DA SETA
+    */
+
+    tutorialArrow.style.top =
+        `${rect.top - 50}px`;
+
+
+    tutorialArrow.style.left =
+        `${rect.left + rect.width / 2 - 15}px`;
+
+}
+
+
+/* =====================================================
+   PRÓXIMA ETAPA
+===================================================== */
+
+function nextTutorialStep() {
+
+    if (
+
+        currentTutorialStep >=
+
+        tutorialSteps.length - 1
+
+    ) {
+
+        closeTutorial();
+
+        return;
+
+    }
+
+
+    currentTutorialStep++;
+
+
+    showTutorialStep();
+
+}
+
+
+/* =====================================================
+   ETAPA ANTERIOR
+===================================================== */
+
+function previousTutorialStep() {
+
+    if (
+
+        currentTutorialStep <= 0
+
+    ) {
+
+        return;
+
+    }
+
+
+    currentTutorialStep--;
+
+
+    showTutorialStep();
+
+}
+
+
+/* =====================================================
+   EVENTOS
+===================================================== */
+
+if (tutorialNext) {
+
+    tutorialNext.addEventListener(
+
+        "click",
+
+        nextTutorialStep
+
+    );
+
+}
+
+
+if (tutorialBack) {
+
+    tutorialBack.addEventListener(
+
+        "click",
+
+        previousTutorialStep
+
+    );
+
+}
+
+
+if (tutorialSkip) {
+
+    tutorialSkip.addEventListener(
+
+        "click",
+
+        closeTutorial
+
+    );
+
+}
+
+
+if (tutorialClose) {
+
+    tutorialClose.addEventListener(
+
+        "click",
+
+        closeTutorial
+
+    );
+
+}
+
+
+/* =====================================================
+   REABRIR TUTORIAL
+===================================================== */
+
+if (tutorialRestart) {
+
+    tutorialRestart.addEventListener(
+
+        "click",
+
+        () => {
+
+            localStorage.removeItem(
+                "techemuTutorialCompleted"
+            );
+
+
+            startTutorial();
+
+        }
+
+    );
+
+}
+
+
+/* =====================================================
+   REPOSICIONAR AO MUDAR A TELA
+===================================================== */
+
+window.addEventListener(
+
+    "resize",
+
+    () => {
+
+        if (!tutorialActive) {
+
+            return;
+
+        }
+
+
+        const step =
+            tutorialSteps[
+                currentTutorialStep
+            ];
+
+
+        const target =
+            document.querySelector(
+                step.target
+            );
+
+
+        if (target) {
+
+            positionTutorialTarget(
+                target
+            );
+
+        }
+
+    }
+
+);
+
+
+/* =====================================================
+   PRIMEIRA VISITA
+===================================================== */
+
+window.addEventListener(
+
+    "load",
+
+    () => {
+
+        const tutorialCompleted =
+            localStorage.getItem(
+                "techemuTutorialCompleted"
+            );
+
+
+        if (
+
+            !tutorialCompleted
+
+        ) {
+
+            setTimeout(
+
+                () => {
+
+                    startTutorial();
+
+                },
+
+                1200
+
+            );
+
+        }
+
+    }
+
+);/* =====================================================
+   BOTÃO VOLTAR AO TOPO
+===================================================== */
+
+const backToTop =
+    document.getElementById(
+        "backToTop"
+    );
+
+
+/* MOSTRAR O BOTÃO */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (
+            window.scrollY > 500
+        ) {
+
+            backToTop.classList.add(
+                "visible"
+            );
+
+        } else {
+
+            backToTop.classList.remove(
+                "visible"
+            );
+
+        }
+
+    }
+);
+
+
+/* VOLTAR PARA O TOPO */
+
+backToTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior:
+                "smooth"
+
+        });
+
+    }
+);

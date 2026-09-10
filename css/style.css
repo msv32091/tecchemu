@@ -1975,7 +1975,7 @@ body.modal-open {
 
 .social-button.instagram:hover {
 
-    background: #e1306c;
+    background: #C13584;
 
     transform: translateY(-5px);
 
@@ -2000,7 +2000,19 @@ body.modal-open {
 
 }
 
+/* YOUTUBE */
 
+.social-button.youtube:hover {
+
+    background: #ff0000;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(255, 0, 0, 0.35);
+
+}
 /* EFEITO AO CLICAR */
 
 .social-button:active {
@@ -2821,6 +2833,655 @@ body.modal-open {
 
         font-size:
             11px;
+
+    }
+
+}/* =====================================================
+   TUTORIAL GUIADO
+===================================================== */
+
+.tutorial {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+}
+
+
+.tutorial.active {
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   FUNDO ESCURO
+===================================================== */
+
+.tutorial-overlay {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   ÁREA DESTACADA
+===================================================== */
+
+.tutorial-highlight {
+
+    position: fixed;
+
+    z-index: 10002;
+
+    border-radius: 16px;
+
+    border:
+        2px solid
+        var(--primary-light);
+
+    box-shadow:
+
+    0 0 0 9999px
+    rgba(
+        0,
+        0,
+        0,
+        0.72
+    ),
+
+    0 0 0 5px
+    rgba(
+        124,
+        60,
+        255,
+        0.18
+    ),
+
+    0 0 35px
+    rgba(
+        124,
+        60,
+        255,
+        0.8
+    );
+
+    pointer-events: none;
+
+    transition:
+
+        top 0.45s ease,
+        left 0.45s ease,
+        width 0.45s ease,
+        height 0.45s ease;
+
+}
+
+
+/* =====================================================
+   SETA
+===================================================== */
+
+.tutorial-arrow {
+
+    position: fixed;
+
+    z-index: 10003;
+
+    font-size: 42px;
+
+    color:
+        var(--primary-light);
+
+    text-shadow:
+
+        0 0 15px
+        rgba(
+            124,
+            60,
+            255,
+            0.9
+        );
+
+    pointer-events: none;
+
+    animation:
+        tutorialArrowBounce
+        1s
+        infinite;
+
+}
+
+
+@keyframes tutorialArrowBounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:
+            translateY(10px);
+
+    }
+
+}
+
+
+/* =====================================================
+   CAIXA DO TUTORIAL
+===================================================== */
+
+.tutorial-box {
+
+    position: fixed;
+
+    z-index: 10004;
+
+    width:
+        min(
+            390px,
+            calc(100% - 30px)
+        );
+
+    padding:
+        25px;
+
+    border-radius:
+        20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #151923,
+            #0d1016
+        );
+
+    border:
+        1px solid
+        rgba(
+            124,
+            60,
+            255,
+            0.35
+        );
+
+    box-shadow:
+
+        0 25px 80px
+        rgba(
+            0,
+            0,
+            0,
+            0.6
+        );
+
+    animation:
+        tutorialBoxIn
+        0.35s
+        ease;
+
+}
+
+
+@keyframes tutorialBoxIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.96);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   FECHAR
+===================================================== */
+
+.tutorial-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.tutorial-close:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+}
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.tutorial-progress {
+
+    color:
+        var(--primary-light);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================================
+   ÍCONE
+===================================================== */
+
+.tutorial-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+
+    background:
+
+        rgba(
+            124,
+            60,
+            255,
+            0.15
+        );
+
+    font-size: 27px;
+
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.tutorial-box h2 {
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.tutorial-box p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.tutorial-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+
+.tutorial-navigation {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.tutorial-back,
+.tutorial-next,
+.tutorial-skip {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    border-radius: 9px;
+
+}
+
+
+.tutorial-back {
+
+    width: 42px;
+
+    height: 42px;
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    color: white;
+
+}
+
+
+.tutorial-next {
+
+    height: 42px;
+
+    padding:
+        0 18px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+}
+
+
+.tutorial-next:hover {
+
+    background:
+        var(--primary-light);
+
+}
+
+
+.tutorial-skip {
+
+    background: none;
+
+    color:
+        var(--text-secondary);
+
+    padding:
+        10px 0;
+
+}
+
+
+.tutorial-skip:hover {
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   BOTÃO REABRIR TUTORIAL
+===================================================== */
+
+.tutorial-restart-button {
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color:
+        var(--text-secondary);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.tutorial-restart-button:hover {
+
+    color:
+        var(--primary-light);
+
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .tutorial-box {
+
+        padding: 20px;
+
+    }
+
+
+    .tutorial-box h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .tutorial-box p {
+
+        font-size: 13px;
+
+    }
+
+
+    .tutorial-arrow {
+
+        font-size: 35px;
+
+    }
+
+}/* =====================================================
+   BOTÃO VOLTAR AO TOPO
+===================================================== */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 999;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            124,
+            60,
+            255,
+            0.35
+        );
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease,
+        background 0.2s ease;
+
+}
+
+
+/* BOTÃO VISÍVEL */
+
+.back-to-top.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* HOVER */
+
+.back-to-top:hover {
+
+    background:
+        var(--primary-light);
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+/* CLIQUE */
+
+.back-to-top:active {
+
+    transform:
+        scale(0.92);
+
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .back-to-top {
+
+        width: 46px;
+
+        height: 46px;
+
+        right: 18px;
+
+        bottom: 18px;
+
+        font-size: 25px;
+
+        border-radius: 13px;
 
     }
 

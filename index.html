@@ -170,7 +170,10 @@
         </p>
 
 
-        <div class="platform-buttons">
+        <div
+    class="platform-buttons"
+    id="tutorialCategories"
+>
 
     <button
         class="platform-button active"
@@ -211,7 +214,10 @@
 
     <div class="container">
 
-        <div class="search-box">
+        <div
+    class="search-box"
+    id="tutorialSearch"
+>
 
             <span class="search-icon">
                 🔍
@@ -265,6 +271,20 @@
 
     </div>
 
+</div>
+
+<div id="pcWarning" class="mobile-warning">
+    <div class="mobile-warning-icon">🖥️</div>
+
+    <div class="mobile-warning-content">
+        <strong>JOGOS PARA PC</strong>
+
+        <p>
+            Os jogos desta categoria são feitos para rodar
+            diretamente no computador. <b>Não é necessário utilizar
+            aplicativos de emulação.</b>
+        </p>
+    </div>
 </div>
 
     </div>
@@ -398,9 +418,9 @@
 
 
         <div
-            class="games-grid"
-            id="allGames"
-        ></div>
+    class="games-grid"
+    id="allGames"
+></div>
 
     </div>
 
@@ -432,7 +452,10 @@
 
     <!-- REDES SOCIAIS -->
 
-    <div class="social-links">
+    <div
+    class="social-links"
+    id="tutorialSocial"
+>
 
         <a
             href="https://www.instagram.com/techemu"
@@ -455,6 +478,16 @@
             <i class="fa-brands fa-discord"></i>
         </a>
 
+<a href="https://www.youtube.com/@techemu"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="social-button youtube"
+   aria-label="YouTube">
+
+    <i class="fa-brands fa-youtube"></i>
+
+</a>
+
     </div>
 
 </div>
@@ -475,6 +508,14 @@
             <a href="#todos-jogos">
                 Todos os Jogos
             </a>
+
+<button
+    class="tutorial-restart-button"
+    id="tutorialRestart"
+    type="button"
+>
+    Como usar a TechEmu?
+</button>
 
         </div>
 
@@ -735,7 +776,149 @@
 </div>
 
 
+<!-- =====================================================
+     TUTORIAL DA TECHEMU
+===================================================== -->
 
+<div
+    class="tutorial"
+    id="tutorial"
+    aria-hidden="true"
+>
+
+    <!-- ESCURECIMENTO -->
+
+    <div
+        class="tutorial-overlay"
+        id="tutorialOverlay"
+    ></div>
+
+
+    <!-- ÁREA DESTACADA -->
+
+    <div
+        class="tutorial-highlight"
+        id="tutorialHighlight"
+    ></div>
+
+
+    <!-- SETA -->
+
+    <div
+        class="tutorial-arrow"
+        id="tutorialArrow"
+    >
+        ⇩
+    </div>
+
+
+    <!-- CAIXA DE INFORMAÇÕES -->
+
+    <div
+        class="tutorial-box"
+        id="tutorialBox"
+    >
+
+        <button
+            class="tutorial-close"
+            id="tutorialClose"
+            type="button"
+            aria-label="Fechar tutorial"
+        >
+            ✕
+        </button>
+
+
+        <!-- CONTADOR -->
+
+        <div
+            class="tutorial-progress"
+            id="tutorialProgress"
+        >
+            1 / 6
+        </div>
+
+
+        <!-- ÍCONE -->
+
+        <div
+            class="tutorial-icon"
+            id="tutorialIcon"
+        >
+            🎮
+        </div>
+
+
+        <!-- TÍTULO -->
+
+        <h2
+            id="tutorialTitle"
+        >
+            Bem-vindo!
+        </h2>
+
+
+        <!-- DESCRIÇÃO -->
+
+        <p
+            id="tutorialDescription"
+        ></p>
+
+
+        <!-- BOTÕES -->
+
+        <div
+            class="tutorial-buttons"
+        >
+
+            <button
+                class="tutorial-skip"
+                id="tutorialSkip"
+                type="button"
+            >
+                Pular
+            </button>
+
+
+            <div
+                class="tutorial-navigation"
+            >
+
+                <button
+                    class="tutorial-back"
+                    id="tutorialBack"
+                    type="button"
+                >
+                    ◀
+                </button>
+
+
+                <button
+                    class="tutorial-next"
+                    id="tutorialNext"
+                    type="button"
+                >
+                    Próximo ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Voltar ao topo"
+    title="Voltar ao topo"
+>
+    ⬆
+</button>
 
 <script src="js/script.js"></script>
 
