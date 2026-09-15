@@ -3531,6 +3531,23 @@ const tutorialSteps = [
     },
 
 
+ {
+
+        target:
+            "#customizeButton",
+
+        icon:
+            "🎨",
+
+        title:
+            "Personalizar a TechEmu",
+
+        description:
+            "Clique aqui para personalizar a sua TechEmu, deixe ela do seu jeito personalizando a cor de sua preferência."
+
+    },
+
+
     {
 
         target:
