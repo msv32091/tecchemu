@@ -989,6 +989,231 @@ const games = [
         ]
     },
 
+{
+        id: "GTA V",
+
+        title: "GTA V PT-BR: Otimizado",
+
+        image: "gta-v.jpg",
+
+        category: ["Ação"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "22.8GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://buzzheavier.com/gay0rakzbzyk",
+
+        gallery: [
+            "gta-v-1.jpg",
+            "gta-v-2.jpg"
+        ]
+    },
+
+{
+        id: "euro truck simulator 2",
+
+        title: "Euro Truck Simulator 2",
+
+        image: "euro-truck-simulator-2.jpg",
+
+        category: ["Simulador"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "3.09GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/h1a7szc5qrzl53j",
+
+        gallery: [
+            "euro-truck-1.jpg",
+            "euro-truck-2.jpg"
+        ]
+    },
+
+{
+        id: "Forza Horizon 5",
+
+        title: "Forza Horizon 5",
+
+        image: "forza-horizon-5.jpg",
+
+        category: ["Corrida"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "89.0GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://gofile.io/d/eVupkr",
+
+        gallery: [
+            "forza-horizon-5-1.jpg",
+            "forza-horizon-5-2.jpg"
+        ]
+    },
+
+{
+        id: "Forza Horizon 4",
+
+        title: "Forza Horizon 4",
+
+        image: "forza-horizon-4.jpg",
+
+        category: ["Corrida"],
+
+        platform: "pc",
+
+        featured: false,
+
+        size: "79.0GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://gofile.io/d/OtEhEn",
+
+        gallery: [
+            "forza-horizon-4-1.jpg",
+            "forza-horizon-4-2.jpg"
+        ]
+    },
+
+{
+        id: "God Of War Ragnarok",
+
+        title: "God Of War Ragnarok Lite",
+
+        image: "god-of-war-ragnarok-lite.jpg",
+
+        category: ["Ação"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "28.6GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://buzzheavier.com/1amlm08atvkn",
+
+        gallery: [
+            "god-of-war-ragnarok-lite-2.jpg",
+            "god-of-war-ragnarok-lite-1.jpg"
+        ]
+    },
+
+    {
+        id: "God Of War 2018",
+
+        title: "God Of War 2018",
+
+        image: "god-of-war-2018.jpg",
+
+        category: ["Ação"],
+
+        platform: "pc",
+
+        featured: false,
+
+        size: "9.4GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://buzzheavier.com/pyyxfyrnklf0",
+
+        gallery: [
+            "god-of-war-2018-1.jpg",
+            "god-of-war-2018-2.jpg"
+        ]
+    },
+
+{
+        id: "COD Black Ops",
+
+        title: "Call of Duty: Black Ops",
+
+        image: "cod-black-ops.jpg",
+
+        category: ["Ação", "Tiro"],
+
+        platform: "pc",
+
+        featured: false,
+
+        size: "7.75GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://www.mediafire.com/file/f9w84e2k47btwc3/Call+Of+Duty+Black+Ops+1+Optimized.7z/file?action=check",
+
+        gallery: [
+            "cod-black-ops-1.jpg",
+            "cod-black-ops-1-2.jpg"
+        ]
+    },
+
+{
+        id: "COD Black Ops 2",
+
+        title: "Call of Duty: Black Ops 2",
+
+        image: "cod-black-ops-2.jpg",
+
+        category: ["Ação", "Tiro"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "30.4GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://buzzheavier.com/8n3nhkehn462",
+
+        gallery: [
+            "cod-black-ops-2-1.jpg",
+            "cod-black-ops-2-2.jpg"
+        ]
+    },
+
+{
+        id: "COD Black Ops 3",
+
+        title: "Call of Duty: Black Ops 3",
+
+        image: "cod-black-ops-3.jpg",
+
+        category: ["Ação", "Tiro"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "53.9GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://gofile.io/d/kfJDyr",
+
+        gallery: [
+            "cod-black-ops-3-1.jpg",
+            "cod-black-ops-3-2.jpg"
+        ]
+    },
+
 
     {
         id: "medal-of-honor-heroes-2",
