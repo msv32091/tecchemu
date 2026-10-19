@@ -1140,6 +1140,56 @@ const games = [
     },
 
 {
+        id: "The Last Of Us Part 1",
+
+        title: "The Last Of Us Part I",
+
+        image: "the-last-of-us-part-1.jpg",
+
+        category: ["Ação"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "66.3GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://gofile.io/d/lEHzIG",
+
+        gallery: [
+            "the-last-of-us-part-1-1.jpg",
+            "the-last-of-us-part-1-2.jpg"
+        ]
+    },
+
+{
+        id: "The Last Of Us Part 2",
+
+        title: "The Last Of Us Part II",
+
+        image: "the-last-of-us-part-2.jpg",
+
+        category: ["Ação"],
+
+        platform: "pc",
+
+        featured: true,
+
+        size: "82.7GB",
+
+        downloadMobile: "",
+
+        downloadPc: "https://gofile.io/d/jXBxIu",
+
+        gallery: [
+            "the-last-of-us-part-2-1.jpg",
+            "the-last-of-us-part-2-2.jpg"
+        ]
+    },
+
+{
         id: "COD Black Ops",
 
         title: "Call of Duty: Black Ops",
